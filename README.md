@@ -28,14 +28,14 @@
         "username": "username", // (必填)登录用户名  
         "password": "password", // 登录密码 (和私钥路径，二选一)
         // "privateKeyPath": "/your_path/id_rsa", // 私钥路径 (和登录密码，二选一)，注意：最好不要将密匙放代码根目录
-        "upload_on_save": false, // 保存后实时提交，建议单人开发使用，upload_on_save设置为true时，submit_git_before_upload无效，默认false
-        "watch": true, // 监听上传目录文件变动，默认true，如果upload_on_save为true，则此项无效
+        "upload_on_save": false, // 保存后实时提交，建议单人开发使用，upload_on_save设置为true时，watch、submit_git_before_upload、compress、deleteRemote无效，默认false
+        "watch": true, // 监听上传目录文件变动，默认true
         "submit_git_before_upload": true, // 团队开发使用，上传代码前提交本地git，防止覆盖远程代码，默认false
         "submit_git_msg": "", // 提交git的message配置，默认空。submit_git_before_upload为true时，不填写会弹出提示框手动填写
         // "build": "yarn build:test", // (非必填) 构建执行的命令 如果是前端项目则打开此项
         "compress": true, //  是否压缩上传，并远程解压（账号需要支持ssh登录，系统会自动检测是否支持，不支持，则不会压缩上传），默认false
-        "deleteRemote": false, // 上传前是否删除远程目录 默认false
         "distPath": [], // (非必填) 本地需要上传的目录，支持字符串或数组，默认上传根目录
+        "deleteRemote": false, // 上传前是否删除远程distPath配置目录，一般用于清理前端部署代码， 默认false
         "remotePath": "/www/wwwtest/test", // (必填)上传服务器地址  
         "excludePath": [] // (非必填) 当前环境排除的上传文件及目录，会和插件配置excludePath合并，插件配置使用gitignore的时候，会和.gitignore配置文件合并
     },
