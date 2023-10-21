@@ -2,6 +2,9 @@
 
 [中文文档](https://github.com/oorzc/ssh-tools/blob/main/README.zh-CN.md)
 
+[DOWNLOAD](https://marketplace.visualstudio.com/items?itemName=oorzc.ssh-tools)
+
+
 ## ✨ Plugin Features
 
 1. Supports custom configuration of multiple development environments.
