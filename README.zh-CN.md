@@ -1,5 +1,7 @@
 # ssh tools 代码快速上传工具
 
+[下载地址](https://marketplace.visualstudio.com/items?itemName=oorzc.ssh-tools)
+
 ## ✨ 插件功能
 
 1. 支持自定义配置多个开发环境
@@ -69,6 +71,7 @@
 
 只上传变动数据
 ![](https://cdn.jsdelivr.net/gh/oorzc/public_img@main/img/2023%2F10%2F07%2F20231007164843.gif)
+
 
 ## BUG反馈
 
