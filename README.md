@@ -14,6 +14,7 @@
 6. Supports checking if the code is up-to-date with git before uploading, suitable for teams.
 7. Supports custom upload directories and exclusion of certain directories.
 8. Supports downloading remote files.
+9. Support for proxy settings
 
 ## 📖 Usage Instructions
 
@@ -24,6 +25,10 @@
 
 2. Adding Project Configuration
     ![](https://cdn.jsdelivr.net/gh/oorzc/public_img@main/img/2023%2F10%2F20%2F20231020152143.gif)
+
+3. Proxy settings, you need to set proxy = true in the following project configuration to enable it
+   ![](https://cdn.jsdelivr.net/gh/oorzc/public_img@main/img/2024%2F09%2F01%2Fcd35fdaffd774dd03249f63a5ca5b20c.png)
+
 
 Sample project configuration:
 
@@ -36,6 +41,7 @@ Sample project configuration:
         "username": "username", // (Required) Login username  
         "password": "password", // Login password (or private key path, choose one)
         // "privateKeyPath": "/your_path/id_rsa", // Private key path (or login password, choose one). Note: it's best not to place the key in the root directory of the code.
+        "proxy": false, // Whether to use proxy, default false
         "upload_on_save": false, // Real-time submission after saving, recommended for single-person development. If set to true, watch, submit_git_before_upload, compress, and deleteRemote are ineffective. Default is false.
         "watch": true, // Watch for file changes in the upload directory, default is true. If upload_on_save is true, this is ineffective. If distPath is configured, only changes in distPath are watched.
         "submit_git_before_upload": true, // For team development, commits local git before uploading to prevent overwriting remote code, default is false.
@@ -51,6 +57,7 @@ Sample project configuration:
     "online": { // Production environment
         "host": "0.0.0.0",  
         "port": 22, 
+        "proxy": true, 
         "username": "username", 
         "password": "password",
         // "privateKeyPath": "/your_path/id_rsa", 
