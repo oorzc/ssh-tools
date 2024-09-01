@@ -12,6 +12,7 @@
 6. 支持上传代码检测git是否最新，适用于团队
 7. 支持自定义上传目录和排除不上传目录
 8. 支持下载远程文件
+9. 支持代理设置
 
 ## 📖 使用介绍
 
@@ -22,6 +23,9 @@
 
 2. 添加项目配置
     ![](https://cdn.jsdelivr.net/gh/oorzc/public_img@main/img/2023%2F10%2F20%2F20231020152143.gif)
+
+3. 代理设置，需要在下面项目配置中设置proxy = true才会开启
+   ![](https://cdn.jsdelivr.net/gh/oorzc/public_img@main/img/2024%2F09%2F01%2Fcd35fdaffd774dd03249f63a5ca5b20c.png)
 
 项目配置参考
 
@@ -34,6 +38,7 @@
         "username": "username", // (必填)登录用户名  
         "password": "password", // 登录密码 (和私钥路径，二选一)
         // "privateKeyPath": "/your_path/id_rsa", // 私钥路径 (和登录密码，二选一)，注意：最好不要将密匙，放代码根目录
+        "proxy": false, // 是否使用代理，默认false
         "upload_on_save": false, // 保存后实时提交，建议单人开发使用，upload_on_save设置为true时，watch、submit_git_before_upload、compress、deleteRemote无效，默认false
         "watch": true, // 监听上传目录文件变动，默认true，如果upload_on_save为true，则此项无效。如果配置了distPath目录，则只监听distPath目录下文件变动
         "submit_git_before_upload": true, // 团队开发使用，上传代码前提交本地git，防止覆盖远程代码，默认false
@@ -49,6 +54,7 @@
     "online": { //正式环境
         "host": "0.0.0.0",  
         "port": 22, 
+        "proxy": true, 
         "username": "username", 
         "password": "password",
         // "privateKeyPath": "/your_path/id_rsa", 
@@ -74,7 +80,6 @@
 
 只上传变动数据
 ![](https://cdn.jsdelivr.net/gh/oorzc/public_img@main/img/2023%2F10%2F07%2F20231007164843.gif)
-
 
 ## BUG反馈
 
