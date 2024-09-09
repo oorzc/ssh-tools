@@ -48,6 +48,9 @@ Sample project configuration:
         "submit_git_msg": "", // Git commit message configuration, default is empty. If submit_git_before_upload is true and this is not filled, a prompt will appear to manually enter it.
         // "build": "yarn build:test", // (Optional) Build command to execute, typically for front-end projects.
         "compress": true, // Whether to compress and upload, then extract remotely (account needs SSH login support, system will auto-detect). Default is false.
+        //"remote_unpacked": true, // Whether to decompress the compressed file remotely after uploading, default true
+        //"delete_remote_compress": true, // Whether to delete the zip file after uploading, default true
+        //"delete_local_compress": true, // Whether to delete the local compressed file after uploading the compressed file, the default is true
         "distPath": [], // (Optional) Local directories to upload, supports string or array. Default is the root directory.
         "upload_to_root": false, // If there is only one distPath configuration directory, it is uploaded to the remotePath root directory. It is generally used to deploy front-end code. The default value is false
         "deleteRemote": false, // Whether to delete the remote distPath directory before uploading. Generally used for clearing front-end deployment code. Default is false.
@@ -67,6 +70,9 @@ Sample project configuration:
         "submit_git_msg": "", 
         // "build": "yarn build:online",  
         "compress": true, 
+        // "remote_unpacked": true, 
+        // "delete_remote_compress": true, 
+        // "delete_local_compress": true, 
         "upload_to_root": false, 
         "deleteRemote": false, 
         "distPath": [], 
@@ -84,6 +90,3 @@ Real-time upload
 Upload only changed data
 ![](https://cdn.jsdelivr.net/gh/oorzc/public_img@main/img/2023%2F10%2F07%2F20231007164843.gif)
 
-## Bug Reports
-
-[Github](https://github.com/oorzc/ssh-tools/issues)

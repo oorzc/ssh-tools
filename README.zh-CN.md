@@ -45,6 +45,9 @@
         "submit_git_msg": "", // 提交git的message配置，默认空。submit_git_before_upload为true时，不填写会弹出提示框手动填写
         // "build": "yarn build:test", // (非必填) 构建执行的命令 如果是前端项目则打开此项
         "compress": true, //  是否压缩上传，并远程解压（账号需要支持ssh登录，系统会自动检测是否支持，不支持，则不会压缩上传），默认false
+        //"remote_unpacked": true, // 压缩上传后是否远程解压，默认true
+        //"delete_remote_compress": true, // 压缩文件上传后是否删除远程压缩文件，默认true
+        //"delete_local_compress": true, // 压缩文件上传后是否删除本地压缩文件，默认true
         "distPath": [], // (非必填) 本地需要上传的目录，支持字符串或数组，默认上传根目录
         "upload_to_root": false, // 如果distPath配置目录只有一个，则上传到remotePath根目录，一般用于部署前端代码， 默认false
         "deleteRemote": false, // 上传前是否删除远程distPath配置目录，一般用于清理前端部署代码， 默认false
@@ -64,6 +67,8 @@
         "submit_git_msg": "", 
         // "build": "yarn build:online",  
         "compress": true, 
+        //"remote_unpacked": true, 
+        //"delete_remote_compress": true, 
          "upload_to_root": false, 
         "deleteRemote": false, 
         "distPath": [], 
@@ -80,7 +85,3 @@
 
 只上传变动数据
 ![](https://cdn.jsdelivr.net/gh/oorzc/public_img@main/img/2023%2F10%2F07%2F20231007164843.gif)
-
-## BUG反馈
-
-[Github](https://github.com/oorzc/ssh-tools/issues)
